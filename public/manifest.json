@@ -1,0 +1,22 @@
+{
+  "name": "Vytal",
+  "description": "Vytal",
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": ["xagent.js"],
+  "icons": {
+    "16": "icon_16.png",
+    "32": "icon_32.png",
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  }
+}
