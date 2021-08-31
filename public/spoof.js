@@ -12,6 +12,12 @@ const USERAGENT =
 const PLATFORM = 'Windows';
 const DEVICEMEMORY = 1;
 
+console.log(Object.getPrototypeOf(navigator));
+
+// chrome.storage.sync.get('userAgent', ({ userAgent }) => {
+//   console.log(userAgent);
+// });
+
 defProp('userAgent', USERAGENT);
 defProp('appVersion', USERAGENT);
 defProp('platform', PLATFORM);

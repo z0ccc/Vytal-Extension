@@ -3,12 +3,11 @@
   "description": "Vytal",
   "manifest_version": 2,
   "version": "1.0.0",
-
-  "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+  "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["content.js"],
+      "js": ["spoof.js", "content.js"],
       "run_at": "document_start",
       "match_about_blank": true,
       "all_frames": true

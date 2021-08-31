@@ -28,7 +28,12 @@ import Table from './Table';
 // };
 
 const TableBox = () => {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    chrome.storage.sync.set({ userAgent: 'test' });
+    chrome.storage.sync.get('userAgent', ({ userAgent }) => {
+      console.log(userAgent);
+    });
+  }, []);
 
   const uaResult = Bowser.parse(navigator.userAgent);
   const date = new Date();
