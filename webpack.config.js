@@ -1,10 +1,11 @@
-const webpack = require("webpack");
-const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
+const webpack = require('webpack');
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
   entry: {
     popup: path.join(__dirname, 'src/components/popup.js'),
+    content: path.join(__dirname, 'src/components/content.js'),
   },
   output: { path: path.join(__dirname, 'dist'), filename: '[name].js' },
   module: {

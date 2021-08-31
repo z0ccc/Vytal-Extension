@@ -3,20 +3,31 @@
   "description": "Vytal",
   "manifest_version": 2,
   "version": "1.0.0",
+
   "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
   "content_scripts": [
     {
       "matches": ["*://*/*"],
       "js": ["content.js"],
       "run_at": "document_start",
+      "match_about_blank": true,
       "all_frames": true
     }
   ],
-  "web_accessible_resources": ["xagent.js"],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    },
+    "default_popup": "popup.html"
+  },
   "icons": {
     "16": "icon_16.png",
     "32": "icon_32.png",
     "48": "icon_48.png",
     "128": "icon_128.png"
-  }
+  },
+  "web_accessible_resources": ["spoof.js"]
 }

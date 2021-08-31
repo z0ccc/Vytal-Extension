@@ -146,11 +146,11 @@ const TableBox = () => {
     //   title: 'Battery status',
     //   value: batStatus,
     // },
-    // {
-    //   key: 'deviceMemory',
-    //   title: 'Device memory',
-    //   value: navigator.deviceMemory ? `${navigator.deviceMemory}GB` : 'N/A',
-    // },
+    {
+      key: 'deviceMemory',
+      title: 'Device memory',
+      value: navigator.deviceMemory ? `${navigator.deviceMemory}GB` : 'N/A',
+    },
     // {
     //   key: 'cpuCores',
     //   title: '# of CPU cores',
