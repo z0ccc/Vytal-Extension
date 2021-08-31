@@ -6,8 +6,8 @@
   "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["spoof.js", "content.js"],
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
       "run_at": "document_start",
       "match_about_blank": true,
       "all_frames": true

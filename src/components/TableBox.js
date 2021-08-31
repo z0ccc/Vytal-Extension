@@ -29,16 +29,20 @@ import Table from './Table';
 
 const TableBox = () => {
   useEffect(() => {
-    chrome.storage.sync.set({ userAgent: 'test' });
-    chrome.storage.sync.get('userAgent', ({ userAgent }) => {
-      console.log(userAgent);
-    });
+    chrome.storage.sync.set({ info });
   }, []);
 
   const uaResult = Bowser.parse(navigator.userAgent);
   const date = new Date();
   const gl = document.createElement('canvas').getContext('webgl');
   const ext = gl.getExtension('WEBGL_debug_renderer_info');
+
+  const info = [
+    {
+      name: 'hardwareConcurrency',
+      value: 3,
+    },
+  ];
 
   // Software table items
   const software = [
