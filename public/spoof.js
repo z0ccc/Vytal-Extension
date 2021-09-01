@@ -7,8 +7,9 @@ const defProp = (prop, value) => {
   });
 };
 
-const info = JSON.parse(localStorage.getItem('info'));
+const navigatorInfo = JSON.parse(localStorage.getItem('navigatorInfo'));
+console.log(navigatorInfo);
 
-info.forEach((ele) => {
-  defProp(ele.name, ele.value);
+navigatorInfo.forEach((ele) => {
+  if (ele.value) defProp(ele.key, ele.value);
 });

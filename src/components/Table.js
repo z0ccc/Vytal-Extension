@@ -8,9 +8,9 @@ const Table = ({ title, data }) => (
       </tr>
     </thead>
     {data.map((item) => (
-      <tbody key={item.title}>
+      <tbody key={item.key}>
         <tr>
-          <td>{item.title}:</td>
+          <td>{item.name}:</td>
           <td>{item.value}</td>
         </tr>
       </tbody>
